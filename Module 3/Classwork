@@ -1,4 +1,4 @@
-/* Referencing the txt.file with the "bunny", "octopus", and "rectangle" class to demonstrate constructors, 
+/* Referencing the txt.file with the "bunny", "octopus", and "foo" class to demonstrate constructors, 
 object initializers and fields */
 
 using System;
@@ -30,6 +30,7 @@ class Program
   myfoo.SetA(value);
 
   //Auto property
+  myfoo.SetAuto(5);
 
   int autoValue = myfoo.Auto;
 
@@ -48,8 +49,7 @@ public class Bunny
   public bool HatesCarrots;
 
   // Constructor
-  public Bunny (string Name, bool = eatsBananas = true, bool hatesCarrots = false)
-
+  public Bunny (string name, bool eatsBananas = true, bool hatesCarrots = false)
  {
         Name = name;
         EatsBananas = eatsBananas;
@@ -83,16 +83,26 @@ public class Octopus
 
 using System;
 
-public class Foo
+//foo.cs
+public class Foo 
 {
     private decimal a;
-    public decimal A
+    public Foo(decimal initialValue = 0)
+{
+    a = Math.Round(initialValue, 2);
+}
+public decimal A
 {
     get{ return a; }
     private set { a = Math.Round (value, 2); }
   }
 
 public int Auto { get; private set; } // Automatic Property
+
+ public void SetAuto(int value)
+    {
+        Auto = value; 
+    }
 
 public void SetA(decimal value)
 {

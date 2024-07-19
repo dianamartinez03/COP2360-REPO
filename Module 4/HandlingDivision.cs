@@ -20,17 +20,17 @@ static void Main()
   catch (DivideByZeroException ex) 
   {
     Console.WriteLine ("Error: Dividing by zero is not allowed.");
-    Console.WriteLine ($"Something went wrong. Detailed error message: (ex.Message}");
+    Console.WriteLine ($"Something went wrong. Detailed error message: {ex.Message}");
   }
   catch (FormatException ex)
   {
     Console.WriteLine("Error: Invalid input. Please provide valid integer values.");
-    Console.Writeline($"Something went wrong. Detailed error message: (ex.Message}");
+    Console.Writeline($"Something went wrong. Detailed error message: {ex.Message}");
   }
   catch (OverflowException ex)
   {
     Console.WriteLine("Invalid Input. Values too large.");
-    Console.WriteLine($"Something went wrong. Detailed error message: (ex.Message}");
+    Console.WriteLine($"Something went wrong. Detailed error message: {ex.Message}");
   }
   catch (Exception ex)
   {

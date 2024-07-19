@@ -25,7 +25,7 @@ static void Main()
   catch (FormatException ex)
   {
     Console.WriteLine("Error: Invalid input. Please provide valid integer values.");
-    Console.Writeline($"Something went wrong. Detailed error message: {ex.Message}");
+    Console.WriteLine($"Something went wrong. Detailed error message: {ex.Message}");
   }
   catch (OverflowException ex)
   {

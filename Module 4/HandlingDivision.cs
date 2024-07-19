@@ -17,13 +17,20 @@ static void Main()
   int quotient = DivideValues(value1,value2);
   Console.WriteLine($"The quotient of {value1} divided by {value2} is: {quotient}");
   }
-  catch (DivideByZeroException) 
+  catch (DivideByZeroException ex) 
   {
     Console.WriteLine ("Error: Dividing by zero is not allowed.");
+    Console.WriteLine ("Something went wrong. Detailed error message: (ex.Message}");
   }
-  catch (FormatException)
+  catch (FormatException ex)
   {
     Console.WriteLine("Error: Invalid input. Please provide valid integer values.");
+    Console.Writeline("Something went wrong. Detailed error message: (ex.Message}");
+  }
+  catch (OverflowException ex)
+  {
+    Console.WriteLine("Invalid Input. Values too large.");
+    Console.WriteLine("Something went wrong. Detailed error message: (ex.Message}");
   }
   catch (Exception ex)
   {

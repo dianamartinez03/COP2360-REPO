@@ -4,10 +4,10 @@ class Program
 {
 static void Main()
 {
-  Console.WriteLine("Enter a value:\n");
+  Console.WriteLine("Enter a value:");
   string userInput1 = Console.ReadLine();
     
-  Console.WriteLine("Enter a second value:\n");
+  Console.WriteLine("Enter a second value:");
   string userInput2 = Console.ReadLine();
   try
   {

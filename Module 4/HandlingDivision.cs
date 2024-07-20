@@ -44,6 +44,38 @@ static void Main()
     return value1 / value2;
   }
 }
+/* How the program would look if try catch blocks were removed
+using System; 
+
+class program
+{
+static void Main()
+{
+  Console.WriteLine("Enter a value:");
+  string userInput1 = Console.ReadLine();
+    
+  Console.WriteLine("Enter a second value:");
+  string userInput2 = Console.ReadLine();
+ 
+  int value1 = Convert.ToInt32(userInput1);
+  int value2 = Convert.ToInt32(userInput2);
+    
+  int quotient = DivideValues(value1,value2);
+  Console.WriteLine($"The quotient of {value1} divided by {value2} is: {quotient}");
+  
+  Console.WriteLine("Press any key to exit:");
+  Console.ReadKey();
+}
+  static int DivideValues(int value1, int value2) 
+  {
+    return value1 / value2;
+  }
+}
+*/    
+                      
+
+                      
+    
     
                       
 

@@ -24,31 +24,31 @@ class Program
             switch (choice)
             {
                 case 'a':
-                    PopulateGroceryDict(Store);
+                    PopulateGroceryDict(Store); //Populate the grocery list with predefined items 
                     break;
                 case 'b':
-                    DisplayDictContents(Store);
+                    DisplayDictContents(Store); //Display the contents of the grocery list 
                     break;
                 case 'c':
-                    RemoveContents(Store);
+                    RemoveContents(Store);  //Remove a specific item from the grocery list 
                     break;
                 case 'd':
-                    AddItems(Store);
+                    AddItems(Store); //Add a new item to the grocery list 
                     break;
                 case 'e':
-                    AddValueExisting(Store);
+                    AddValueExisting(Store); // Add a value to a current list 
                     break;
                 case 'f':
-                    SortDictionary(Store);
+                    SortDictionary(Store); // sort the items in the grocery list by key
                     break;
-                case 'g':
+                case 'g': // Exit the loop and quit the program  
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please try again.");
                     break;
             }
         } while (choice != 'g');
-        Console.WriteLine("Thank you for using this Grocery Store. Come Shop Again!");
+        Console.WriteLine("Thank you for using this Grocery Store. Come Shop Again!");  // Loop until the user chooses to quit 
     }
 
     static void PopulateGroceryDict(Dictionary<int, string> Store)
@@ -66,17 +66,17 @@ class Program
         Store.Add(19, "Carrots");
         Console.WriteLine("Grocery List has been populated with items!");
     }
-    static void DisplayDictContents(Dictionary<int, string> Store)
+    static void DisplayDictContents(Dictionary<int, string> Store)  // display the contebts of the grocery list 
     {
         Console.WriteLine("Grocery Store Contents:");
 
-        foreach (var item in Store)
+        foreach (var (key, value) in Store)
         {
-            Console.WriteLine($"{item.Key}, {item.Value}");
+            Console.WriteLine($"{key}, {value}");
         }
 
     }
-    static void RemoveContents(Dictionary<int, string> Store)
+    static void RemoveContents(Dictionary<int, string> Store) // Remove a specific item for the list 
     {
         Console.WriteLine("Enter the quantity of the item you want to remove: ");
         int quantity = int.Parse(Console.ReadLine());
@@ -90,7 +90,7 @@ class Program
             Console.WriteLine("Item not found in the dictionary.");
         }
     }
-    static void AddItems(Dictionary<int, string> Store)
+    static void AddItems(Dictionary<int, string> Store)   // add a new item to the frocery list 
     {
         Console.WriteLine("Enter the quantity of the item you want to add: ");
         int quantity = int.Parse(Console.ReadLine());
@@ -120,7 +120,7 @@ class Program
             Console.WriteLine("Please enter a valid key. Item not found in dictionary.");
         }
     }
-    static void SortDictionary(Dictionary<int, string> Store)
+    static void SortDictionary(Dictionary<int, string> Store) // sort and display the items in the grocery list by key 
     {
         var sortedStoreByValue = Store.OrderBy(item => item.Key).ToList();
         Console.WriteLine("Grocery Store Contents (Sorted):");

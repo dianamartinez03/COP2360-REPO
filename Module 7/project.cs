@@ -66,13 +66,15 @@ class Program
         Store.Add(19, "Carrots");
         Console.WriteLine("Grocery List has been populated with items!");
     }
-    static void DisplayDictContents(Dictionary<int, string> Store)  // display the contebts of the grocery list 
+    static void DisplayDictContents(Dictionary<int, string> Store)  // display the contents of the grocery list 
     {
         Console.WriteLine("Grocery Store Contents:");
 
-        foreach (var (key, value) in Store)
+        // Item will get both key and value inside dictionary in
+        // a single foreach statement
+        foreach (var item in Store)
         {
-            Console.WriteLine($"{key}, {value}");
+            Console.WriteLine($"{item.Key}, {item.Value}");
         }
 
     }

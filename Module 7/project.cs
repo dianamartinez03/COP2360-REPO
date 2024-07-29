@@ -76,7 +76,7 @@ class Program
         {
             Console.WriteLine($"{item.Key}, {item.Value}");
         }
-
+// The foreach statement is an example of one of the enumeration methods that will allow for the contents in grocery dictionary to be displayed
     }
     static void RemoveContents(Dictionary<int, string> Store) // Remove a specific item for the list 
     {

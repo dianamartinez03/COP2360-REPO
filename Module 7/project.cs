@@ -114,12 +114,12 @@ class Program
             Console.WriteLine("Enter the value you want to add to the item:");
             string value = Console.ReadLine();
 
-            Store[quantity] += "- appended value: " + value;
+            Store[quantity] += "- appended value: " + value;    // the entered value by the user appends to the intial value of the item they want to add to
             Console.WriteLine("Your new value has been added successfully.");
         }
         else
         {
-            Console.WriteLine("Please enter a valid key. Item not found in dictionary.");
+            Console.WriteLine("Please enter a valid key. Item not found in dictionary."); //if a quantity that is entered is not on the list, it will ask the user to input a valid key into the dictionary
         }
     }
     static void SortDictionary(Dictionary<int, string> Store) // sort and display the items in the grocery list by key 

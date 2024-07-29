@@ -122,13 +122,13 @@ class Program
             Console.WriteLine("Please enter a valid key. Item not found in dictionary."); //if a quantity that is entered is not on the list, it will ask the user to input a valid key into the dictionary
         }
     }
-    static void SortDictionary(Dictionary<int, string> Store) // sort and display the items in the grocery list by key 
+    static void SortDictionary(Dictionary<int, string> Store) // sort and display the items in the grocery list 
     {
         var sortedStoreByValue = Store.OrderBy(item => item.Key).ToList();
         Console.WriteLine("Grocery Store Contents (Sorted):");
         foreach (var item in sortedStoreByValue)
         {
-            Console.WriteLine($"{item.Key}-{item.Value}");
+            Console.WriteLine($"{item.Key}-{item.Value}");  //Using the foreach, this will display the contents in the dictionary in ascending order
         }
     }
 

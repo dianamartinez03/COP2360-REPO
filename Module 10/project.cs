@@ -4,7 +4,7 @@ public class Program
 {
   public static void Main()
   {
-    //instances
+    //instances  
     Subcontractors subcontractor1 = new Subcontractors("Jason", 98111,"12/13/2002", 1, 20.00);
     subcontractor1.DisplayInfo();
     

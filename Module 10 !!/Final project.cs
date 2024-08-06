@@ -92,13 +92,13 @@ public class Subcontractors : Contractors //Fields from contractors inherited to
     get {return hourlyPayRate; } // read access to hourly pay rate
     set {hourlyPayRate = value; } // write access to hourly pay rate
   }
-
+//Constructor
   public Subcontractors(string name, int number, string start, int wshift, double pay) : base(name, number, start)
   {
     shift = wshift;
     hourlyPayRate = pay;
   }
-    public float ComputePay() 
+    public float ComputePay() //function to compute pay and account for the 3% differential 
   {
     float pay = (float)hourlyPayRate;
     if (shift == 2)
